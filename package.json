@@ -1,6 +1,6 @@
 {
   "name": "@ericora/date-picker",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "keywords": ["angular", "date-picker"],
   "license" : "MIT" ,
   "peerDependencies": {
