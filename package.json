@@ -1,0 +1,12 @@
+{
+  "name": "@ericora/date-picker",
+  "version": "0.0.4",
+  "keywords": ["angular", "date-picker"],
+  "license" : "MIT" ,
+  "peerDependencies": {
+    "@angular/common": "^9.0.7",
+    "@angular/core": "^9.0.7",
+    "tslib": "^1.10.0",
+    "@fortawesome/fontawesome-free": "^5.13.0"
+  }
+}
