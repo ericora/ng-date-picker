@@ -6,8 +6,8 @@ import { Component, OnInit, SimpleChanges, EventEmitter, Input, Output, OnChange
   styleUrls: ['./date-picker.component.scss']
 })
 export class DatePickerComponent implements OnInit, OnChanges {
-  @Input() selectedDay = new Date();
-  @Output() dayChnage = new EventEmitter();
+  @Input() selectedDate = new Date();
+  @Output() dateChange = new EventEmitter();
   @Input() minDate: Date;
   @Input() maxDate: Date;
   weekdayOfFirst: number;
@@ -31,20 +31,20 @@ export class DatePickerComponent implements OnInit, OnChanges {
     if (changes.selectedDay) {
       const currentSelectedDay = changes.selectedDay.currentValue;
       if (currentSelectedDay) {
-        this.selectedDay.setHours(0, 0, 0, 0);
-        this.dayChnage.emit(this.selectedDay);
+        this.selectedDate.setHours(0, 0, 0, 0);
+        this.dateChange.emit(this.selectedDate);
       } else {
-        this.selectedDay = new Date();
-        this.dayChnage.emit(null);
+        this.selectedDate = new Date();
+        this.dateChange.emit(null);
       }
-      this.monthOnShow = this.selectedDay.getMonth();
-      this.yearOnShow = this.selectedDay.getFullYear();
+      this.monthOnShow = this.selectedDate.getMonth();
+      this.yearOnShow = this.selectedDate.getFullYear();
       this.updateDateOnShow();
     }
   }
   initCalender() {
-    this.monthOnShow = this.selectedDay.getMonth();
-    this.yearOnShow = this.selectedDay.getFullYear();
+    this.monthOnShow = this.selectedDate.getMonth();
+    this.yearOnShow = this.selectedDate.getFullYear();
     this.daysInTheMonth = this.getDaysInMonth(this.monthOnShow, this.yearOnShow);
     this.weekdayOfFirst = this.getWeekDayOfFirstDay();
 
@@ -65,8 +65,8 @@ export class DatePickerComponent implements OnInit, OnChanges {
 
   selectDate(day) {
     setTimeout(() => {
-      this.selectedDay = day;
-      this.dayChnage.emit(this.selectedDay);
+      this.selectedDate = day;
+      this.dateChange.emit(this.selectedDate);
     }, 1);
   }
 

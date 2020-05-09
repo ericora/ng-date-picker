@@ -23,7 +23,7 @@ Users have to add [fontawsome](https://fontawesome.com/) into project to make su
 
 ## Step 3:
 ### Add the component to your page
-    <div><date-picker (dayChnage)="urFunction($event)" [selectedDay]="dateObj" [minDate]="dateObj" [maxDate]="dateObj"></date-picker><div>
+    <div><date-picker (dateChange)="urFunction($event)" [selectedDate]="dateObj" [minDate]="dateObj" [maxDate]="dateObj"></date-picker><div>
 > Notice: the component size will depends on its parent size, so you need create a customized tag to nest it. All Input is optional. Default [selectDay] is the current date.
 
 #### The package is the very first time try to publish my personal reused component publicly. I hope it will help you and your app. Thank you.
