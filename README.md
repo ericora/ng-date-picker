@@ -4,8 +4,14 @@ This library was generated with [Angular CLI](https://github.com/angular/angular
 
 This is a simple date picker component that can be used to select date object.
 
+[Demo](https://codesandbox.io/s/sharp-tu-3w5ir?fontsize=14&hidenavigation=1&theme=dark)
 # Dependency
 Users have to add [fontawsome](https://fontawesome.com/) into project to make sure the icons showd properly.
+> Add fontawesome script tag into index.html head.
+
+    <script
+        src="https://kit.fontawesome.com/c5f1a64c8a.js" crossorigin="anonymous">
+    </script>
 
 # Instructions
 ## Step 1:

@@ -3,6 +3,13 @@
   "version": "0.0.5",
   "keywords": ["angular", "date-picker"],
   "license" : "MIT" ,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ericOrang/ng-date-picker"
+  },
+  "bugs": {
+    "url": "https://github.com/ericOrang/ng-date-picker/issues"
+  },
   "peerDependencies": {
     "@angular/common": "^9.0.7",
     "@angular/core": "^9.0.7",
